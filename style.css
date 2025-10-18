@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 10px 30px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(83, 83, 83, 0.494);
+    z-index: 1000;
+    border-radius: 10px;
+    
+}
+.dark{
+    display:none;
+    background-color: rgb(83, 83, 83);
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+.logo{
+    color: #fff;
+}
+
+.light{
+    background-color: rgb(83, 83, 83);
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+/* main section styles */
+main{
+    margin-top: 120px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+section{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+section button{
+    background-color: rgba(83, 83, 83, 0.605);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    
+}
+.clicked{
+    background-color: hsl(3, 77%, 44%);
+    color: rgb(5, 4, 4);
+}
+/* extensions list styles */
+.box{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /* space between grid items (rows and columns) */
+}
+.boxes{
+    padding: 20px;
+    background-color: hsl(226, 25%, 17%);
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+.box-title{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.box-description p{
+    padding-top: 5px;
+    color: rgb(200, 200, 200);
+}
+.box-options{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-options button{
+    background-color: hsl(226, 25%, 17%);
+    border: 1px solid rgb(112, 111, 111);
+    padding: 8px 15px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*light mode styles*/
+.light-mode{
+    background: hsl(217, 61%, 90%);
+    color: #000;
+}
+.boxes.light-mode{
+    background-color: #fff;
+}
+.main.light-mode header{
+    color: #000;
+}   
