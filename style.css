@@ -15,32 +15,41 @@ header{
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    padding: 10px 30px;
+    padding: 10px 15px;
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(83, 83, 83, 0.494);
     z-index: 1000;
-    border-radius: 10px;
+    border-radius: 20px;
     
 }
 .dark{
     display:none;
-    background-color: rgb(83, 83, 83);
+    background-color: hsl(0, 0%, 93%);
     padding: 10px 10px;
     color: #fff;
     border-radius: 10px;
+    cursor: pointer;
+    transition:background-color 0.3s ease
 }
-.logo{
-    color: #fff;
-}
+
 
 .light{
     background-color: rgb(83, 83, 83);
     padding: 10px 10px;
     color: #fff;
     border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.light:hover{
+    background-color: hsl(0, 1%, 47%);
+
+}
+.dark:hover{
+    background-color: hsl(0, 0%, 59%);
 }
 /* main section styles */
 main{
@@ -55,7 +64,7 @@ section{
     align-items: center;
     display: flex;
 }
-section button{
+.filter-buttons{
     background-color: rgba(83, 83, 83, 0.605);
     padding: 10px 20px;
     border: none;
@@ -63,11 +72,14 @@ section button{
     color: #fff;
     cursor: pointer;
     font-size: 17px;
-    
+    transition: background-color 0.3s ease;
+}
+.filter-buttons:hover{
+    background-color: hsl(0, 0%, 88%);   
 }
 .clicked{
     background-color: hsl(3, 77%, 44%);
-    color: rgb(5, 4, 4);
+    color: #fff;
 }
 /* extensions list styles */
 .box{
@@ -80,7 +92,7 @@ section button{
     padding: 20px;
     background-color: hsl(226, 25%, 17%);
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 
@@ -99,23 +111,39 @@ section button{
     justify-content: space-between;
     align-items: center;
 }
-.box-options button{
+.remove{
     background-color: hsl(226, 25%, 17%);
     border: 1px solid rgb(112, 111, 111);
     padding: 8px 15px;
     border-radius: 30px;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
+.remove:hover{
+    background-color: hsl(0, 1%, 26%);
+    
+}
 /*light mode styles*/
 .light-mode{
-    background: hsl(217, 61%, 90%);
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     color: #000;
 }
-.boxes.light-mode{
+.boxes-light-mode{
     background-color: #fff;
-}
-.main.light-mode header{
+    border: 1px solid rgb(216, 216, 216);
     color: #000;
-}   
+}
+
+.main-light-mode{
+    color: #000;
+} 
+.header-light-mode{
+    background-color: #fff;
+    border: 1px solid rgb(216, 216, 216);
+}
+.filter-buttons-light{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid rgb(216, 216, 216);
+}
