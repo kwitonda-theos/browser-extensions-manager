@@ -7,23 +7,19 @@ body{
     font-family: "Noto Sans", sans-serif;
     background: linear-gradient(180deg, #040918 0%, #091540 100%);
     background-repeat: no-repeat;
-    height: 100vh;
+    
 }
+
 header{
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
     padding: 10px 15px;
-    margin: 20px 0;
+    margin: 20px auto; /* center the header block horizontally */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgba(83, 83, 83, 0.494);
     z-index: 1000;
     border-radius: 20px;
-    
 }
 .dark{
     display:none;
@@ -53,7 +49,7 @@ header{
 }
 /* main section styles */
 main{
-    margin-top: 120px;
+    margin-top: 50px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -83,7 +79,7 @@ section{
 }
 /* extensions list styles */
 .box{
-    
+    margin: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px; /* space between grid items (rows and columns) */
@@ -91,7 +87,6 @@ section{
 .boxes{
     padding: 20px;
     background-color: hsl(226, 25%, 17%);
-    margin-top: 20px;
     border-radius: 20px;
 }
 
