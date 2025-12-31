@@ -37,12 +37,22 @@
         <button class="filter-buttons">Active</button>
         <button class="filter-buttons">Inactive</button>
       </div>
-      <button class="create-btn">Create New Extension</button>
+      <button class="create-btn" onclick="create()">Insert New Extension</button>
     </section>
     <div class="box">
 
     </div>
   </main>
+
+  <!-- Modal Popup for Create Extension -->
+  <div id="createModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body">
+        <!-- Content from create.html will be loaded here -->
+      </div>
+    </div>
+  </div>
 
 
   <script type="text/javascript" src="{% static 'js/script.js' %}"></script>

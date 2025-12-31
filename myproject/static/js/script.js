@@ -8,6 +8,41 @@ const header = document.querySelector("header")
 const main = document.querySelector("main")
 const filterInput = document.querySelectorAll(".filter-buttons")
 const boxDescriptionP = document.querySelectorAll("p")
+const InsertExtension = document.querySelector(".create-btn")
+const modal = document.getElementById("createModal")
+const modalBody = document.getElementById("modal-body")
+const closeBtn = document.querySelector(".close")
+
+// create new extension 
+function create() {
+    // Show the modal
+    modal.style.display = "block"
+
+    // Fetch and load create.html content
+    fetch('/create/')
+        .then(response => response.text())
+        .then(data => {
+            modalBody.innerHTML = data
+        })
+        .catch(error => {
+            modalBody.innerHTML = '<p>Error loading form. Please try again.</p>'
+            console.error('Error:', error)
+        })
+}
+
+// Close modal when clicking the X button
+if (closeBtn) {
+    closeBtn.onclick = function () {
+        modal.style.display = "none"
+    }
+}
+
+// Close modal when clicking outside of it
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none"
+    }
+}
 
 document
 // switch themes

@@ -1,19 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: "Noto Sans", sans-serif;
     background: linear-gradient(180deg, #040918 0%, #091540 100%);
     background-repeat: no-repeat;
-    
+
 }
 
-header{
+header {
     width: 90%;
     padding: 10px 15px;
-    margin: 20px auto; /* center the header block horizontally */
+    margin: 20px auto;
+    /* center the header block horizontally */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,18 +23,19 @@ header{
     z-index: 1000;
     border-radius: 20px;
 }
-.dark{
-    display:none;
+
+.dark {
+    display: none;
     background-color: hsl(0, 0%, 93%);
     padding: 10px 10px;
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    transition:background-color 0.3s ease
+    transition: background-color 0.3s ease
 }
 
 
-.light{
+.light {
     background-color: rgb(83, 83, 83);
     padding: 10px 10px;
     color: #fff;
@@ -40,27 +43,32 @@ header{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.light:hover{
+
+.light:hover {
     background-color: hsl(0, 1%, 47%);
 
 }
-.dark:hover{
+
+.dark:hover {
     background-color: hsl(0, 0%, 59%);
 }
+
 /* main section styles */
-main{
+main {
     margin-top: 50px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     color: white;
 }
-section{
+
+section {
     justify-content: space-between;
     align-items: center;
     display: flex;
 }
-.filter-buttons{
+
+.filter-buttons {
     background-color: rgba(83, 83, 83, 0.605);
     padding: 10px 20px;
     border: none;
@@ -70,14 +78,17 @@ section{
     font-size: 17px;
     transition: background-color 0.3s ease;
 }
-.filter-buttons:hover{
-    background-color: hsl(0, 0%, 88%);   
+
+.filter-buttons:hover {
+    background-color: hsl(0, 0%, 88%);
 }
-.clicked{
+
+.clicked {
     background-color: hsl(3, 77%, 44%);
     color: #fff;
 }
-.create-btn{
+
+.create-btn {
     background-color: hsl(217, 89%, 61%);
     padding: 10px 20px;
     border: none;
@@ -87,36 +98,42 @@ section{
     font-size: 17px;
     transition: background-color 0.3s ease;
 }
+
 /* extensions list styles */
-.box{
+.box {
     margin: 20px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px; /* space between grid items (rows and columns) */
+    gap: 20px;
+    /* space between grid items (rows and columns) */
 }
-.boxes{
+
+.boxes {
     padding: 20px;
     background-color: hsl(226, 25%, 17%);
     border-radius: 20px;
 }
 
 
-.box-title{
+.box-title {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.box-description p{
+
+.box-description p {
     padding-top: 5px;
     color: rgb(200, 200, 200);
 }
-.box-options{
+
+.box-options {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.remove{
+
+.remove {
     background-color: hsl(226, 25%, 17%);
     border: 1px solid rgb(112, 111, 111);
     padding: 8px 15px;
@@ -125,30 +142,132 @@ section{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.remove:hover{
+
+.remove:hover {
     background-color: hsl(0, 1%, 26%);
-    
+
 }
+
 /*light mode styles*/
-.light-mode{
+.light-mode {
     background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
     color: #000;
 }
-.boxes-light-mode{
+
+.boxes-light-mode {
     background-color: #fff;
     border: 1px solid rgb(216, 216, 216);
     color: #000;
 }
 
-.main-light-mode{
+.main-light-mode {
     color: #000;
-} 
-.header-light-mode{
+}
+
+.header-light-mode {
     background-color: #fff;
     border: 1px solid rgb(216, 216, 216);
 }
-.filter-buttons-light{
+
+.filter-buttons-light {
     background-color: #fff;
     color: #000;
     border: 1px solid rgb(216, 216, 216);
+}
+
+/* Modal Popup Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: linear-gradient(180deg, #1a2332 0%, #1e2d47 100%);
+    margin: 5% auto;
+    padding: 30px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+}
+
+#modal-body h1 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#modal-body form {
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-body label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #ddd;
+    font-weight: 500;
+}
+
+#modal-body input[type="text"],
+#modal-body textarea,
+#modal-body select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+#modal-body input[type="text"]:focus,
+#modal-body textarea:focus,
+#modal-body select:focus {
+    outline: none;
+    border-color: hsl(217, 89%, 61%);
+}
+
+#modal-body textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+#modal-body input[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: hsl(217, 89%, 61%);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#modal-body input[type="submit"]:hover {
+    background-color: hsl(217, 89%, 50%);
 }

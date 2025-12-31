@@ -5,3 +5,6 @@ from django.http import HttpResponse
 
 def landing(request):
     return render(request,"index.html")
+
+def create(request):
+    return render(request,'create.html')
